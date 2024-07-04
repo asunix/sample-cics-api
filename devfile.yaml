@@ -25,7 +25,7 @@ components:
           - name: CICS_HOST
             value: localhost
           - name: CICS_PORT
-            value: 6666
+            value: '6666'
           - name: CICS_USER
             value: cicsuser
           - name: CICS_PASSWORD
