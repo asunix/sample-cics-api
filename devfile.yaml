@@ -18,8 +18,6 @@ components:
         sourceMapping: /projects
         endpoints:
           - exposure: public
-          - attributes:
-              cookiesAuthEnabled: true
             name: zosconnect-ui
             path: /zosConnect/designer/
             protocol: http
