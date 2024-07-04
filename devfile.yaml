@@ -1,4 +1,4 @@
-schemaVersion: 2.1.0
+schemaVersion: 2.2.0
 metadata:
   name: sample-cics-api
 attributes:
@@ -17,7 +17,9 @@ components:
         mountSources: true
         sourceMapping: /projects
         endpoints:
-          - exposure: public
+          - attributes:
+              cookiesAuthEnabled: false
+            exposure: public
             name: zosconnect-ui
             path: /zosConnect/designer/
             protocol: http
