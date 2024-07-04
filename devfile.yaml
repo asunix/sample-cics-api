@@ -13,11 +13,16 @@ projects:
 components:
     - name: zosconnect
       container:
+        image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.82'
+        mountSources: true
         endpoints:
           - exposure: public
+          - attributes:
+              cookiesAuthEnabled: 'true'
             name: zosconnect-ui
             path: /zosConnect/designer/
             protocol: http
+            secure: 'true'
             targetPort: 9080
         env:
           - name: ZCON_DESIGNER_PROJECT
@@ -30,5 +35,3 @@ components:
             value: cicsuser
           - name: CICS_PASSWORD
             value: password
-        image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.82'
-        mountSources: true
