@@ -15,14 +15,15 @@ components:
       container:
         image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.82'
         mountSources: true
+        sourceMapping: /projects
         endpoints:
           - exposure: public
           - attributes:
-              cookiesAuthEnabled: 'true'
+              cookiesAuthEnabled: true
             name: zosconnect-ui
             path: /zosConnect/designer/
             protocol: http
-            secure: 'true'
+            secure: true
             targetPort: 9080
         env:
           - name: ZCON_DESIGNER_PROJECT
