@@ -11,9 +11,6 @@ projects:
         origin: 'https://github.com/asunix/sample-cics-api.git'
     name: catalog-manager-api
 components:
-    - name: universal-developer-image
-      container:
-        image: 'quay.io/devfile/universal-developer-image:ubi8-latest'
     - name: zosconnect
       container:
         image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.82'
