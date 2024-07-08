@@ -4,7 +4,6 @@
 	  "redhat.vscode-yaml", 
 	  "redhat.vscode-redhat-account",
 	  "redhat.vscode-openshift-connector",
-	  "redhat.java",
 	  "redhat.vscode-xml"
   ]
 }
