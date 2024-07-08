@@ -1,3 +1,10 @@
 {
-  "recommendations": ["DavidAnson.vscode-markdownlint", "redhat.vscode-yaml", "redhat.vscode-xml"]
+  "recommendations": [
+	  "DavidAnson.vscode-markdownlint", 
+	  "redhat.vscode-yaml", 
+	  "redhat.vscode-redhat-account",
+	  "redhat.vscode-openshift-connector",
+	  "redhat.java",
+	  "redhat.vscode-xml"
+  ]
 }
