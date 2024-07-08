@@ -36,3 +36,7 @@ components:
             value: cicsuser
           - name: CICS_PASSWORD
             value: password
+        - id: redhat/vscode-yaml/latest
+          type: chePlugin
+        - id: redhat/vscode-xml/latest
+          type: chePlugin
