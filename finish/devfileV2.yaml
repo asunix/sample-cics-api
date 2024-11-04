@@ -8,20 +8,32 @@ projects:
       checkoutFrom:
         revision: main
       remotes:
-        origin: 'https://github.com/zosconnect/sample-cics-api.git'
+        origin: 'https://github.com/asunix/sample-cics-api.git'
     name: catalog-manager-api
 components:
     - name: zosconnect
       container:
         endpoints:
-          - exposure: public
+          - attributes:
+              cookiesAuthEnabled: true
+            exposure: public
             name: zosconnect-ui
             path: /zosConnect/designer/
             protocol: http
+            secure: true
             targetPort: 9080
         env:
           - name: ZCON_DESIGNER_PROJECT
             value: /projects/catalog-manager-api/finish
+          - name: CICS_HOST
+            value: localhost
+          - name: CICS_PORT
+            value: '6666'
+          - name: CICS_USER
+            value: cicsuser
+          - name: CICS_PASSWORD
+            value: password
         image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.86'
         memoryLimit: 4927M
         mountSources: true
+        sourceMapping: /projects
